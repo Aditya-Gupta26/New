@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">New Attempt</string>
+    <string name="stringy"><![CDATA[<]]></string>
+    <string name="see_time_used">See Time Used</string>
 </resources>
