@@ -4,24 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".MainActivity5">
 
+    <Chronometer
+        android:id="@+id/chronometers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="55dp"
+        android:layout_toRightOf="@id/button_choose_image"
 
+        android:textColor="#4169E1"
+        android:textSize="32dp"
+        android:visibility="gone" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/showtime"
+        android:layout_toRightOf="@id/button_choose_image"
+        android:layout_marginLeft="30dp"
+        android:text="@string/see_time_used"/>
     <Button
         android:id="@+id/button_choose_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textView2"
+        android:layout_marginLeft="30dp"
         android:layout_centerHorizontal="true"
         android:text="Choose file" />
 
-    <ImageView
-        android:id="@+id/image_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/progress_bar"
-        android:layout_below="@id/button_choose_image"
-        android:layout_marginTop="16dp" />
-
+    <!--
     <ProgressBar
         android:id="@+id/progress_bar"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
@@ -31,28 +44,66 @@
         android:layout_alignParentStart="true"
         android:layout_marginBottom="16dp"
         android:layout_alignParentLeft="true" />
+        -->
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/button_upload"
+        android:layout_below="@id/button_choose_image"
+        android:layout_marginTop="1dp"
+        />
 
     <Button
         android:id="@+id/button_upload"
-        android:layout_width="wrap_content"
+        android:layout_width="175dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:text="Upload" />
+        android:layout_alignParentLeft="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_toStartOf="@+id/button2"
+        android:layout_toLeftOf="@+id/button2"
+        android:text="Update Profile Photo"
+        android:textSize="10sp"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/button2"
+        android:layout_below="@id/button_choose_image"
+        android:layout_marginTop="1dp"
+
+         />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="182dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_view"
+        android:layout_alignParentRight="true"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp"
+        android:text="Remove Profile Photo"
+        android:textSize="10sp" />
 
     <TextView
-        android:id="@+id/text_view_show_uploads"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/button_upload"
-        android:layout_alignTop="@+id/button_upload"
-        android:layout_marginStart="25dp"
-        android:layout_toEndOf="@+id/button_upload"
-        android:gravity="center"
-        android:text="Show Uploads"
-        android:textSize="16sp"
-        android:layout_toRightOf="@+id/button_upload"
-        android:layout_marginLeft="25dp" />
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+
+        android:layout_marginTop="0dp"
+        android:text="@string/stringy"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="36sp"
+        tools:ignore="HardcodedText" />
+
 
 </RelativeLayout>
 
